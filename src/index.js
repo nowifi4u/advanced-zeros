@@ -1,15 +1,15 @@
 module.exports = function getZerosCount(number, base) {
   let zero = number;
-  let buf = base;
+  let rem = base;
   let pow = 0;
   let con = 0;
   let k = 0;
   for (let i = 2; i <= base; i++){
-    if (buf % i === 0){
+    if (rem % i === 0){
       pow = 0;
-      while (buf % i === 0){
+      while (rem % i === 0){
         pow++
-        buf = ~~(buf/i)
+        rem = ~~(rem/i)
       }
       con = 0
       k = number
